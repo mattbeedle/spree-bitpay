@@ -10,8 +10,12 @@ module Spree
     attr_accessor :bogus  # bogus since we need to have a param that is passed to trigger Payment.build_source
 
     def actions
-      # TODO: Refund action?	
+      # TODO: Refund action?
       ["void"]
+    end
+
+    def imported
+      false
     end
 
     # Gets the JSON invoice from Bitpay
